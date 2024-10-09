@@ -1,0 +1,781 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Neue Montreal,Arial,Helvetica,sans-serif;
+}
+body{
+    width: 100%;
+}
+#loader{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    z-index: 100;
+}
+#loader .white{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#loader .white p{
+    font-size: 5vw;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+#loader .white h1{
+    font-size: 5vw;
+}
+#loader .white p .name{
+    color: aqua;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.imgheader{
+    width: 100%;
+    height: 100vh;
+    background: url('bannerDesk.webp') center/cover no-repeat;
+    overflow: hidden;
+}
+.brandimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.featured-products {
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+.featured-products h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #2d2d2d;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.product {
+    border-radius: 15px;
+    width: 20vw;
+    overflow: hidden;
+    text-align: start;
+    position: relative;
+}
+/* Basic Product Image Styling */
+.product img {
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover Effect */
+.product:hover img {
+    transform: scale(1.1); /* Zoom in */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    filter: brightness(1.1); /* Brighten the image slightly */
+}
+a{
+    text-decoration: none;
+}
+
+.product h2 {
+    font-size: 16px;
+    color: #333;
+    margin: 15px 0 10px;
+    padding-left: 20px;
+    font-family: 'bold';
+}
+
+.price {
+    font-size: 16px;
+    color: black;
+    padding-left: 20px;
+    font-family: 'Clash Display';
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+}
+
+.sale-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f36;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+nav{
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    color: #fff;
+}
+.navlogo img{
+    width: 60px;
+    border-radius: 50%;
+    padding-left: 20px;
+    top: 10px;
+    position: fixed;
+
+}
+.navlinks ul{
+    display: flex;
+}
+.navlinks a{
+    padding: 0 15px;
+}
+nav .search input{
+    border: none;
+    background-color: none;
+    background: none;
+    color: #fff;
+}
+.navlog ul{
+    display: flex;
+}
+.navlog a{
+    padding: 0 15px;
+}
+nav a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff;
+}
+nav a::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    background-color: rgb(110, 107, 107);
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: scale(0);
+}
+nav a:hover::after{
+    transform: scale(1);
+}
+nav li{
+    list-style: none;
+}
+header .items{
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    bottom: 0%;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    padding: 0 20px;
+}
+.items h3::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 23px;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: translate(-50px);
+    color: #fff;
+    opacity: 0;
+}
+.items h3:hover::after{
+    transform: translate(0px);
+    opacity: 0.4;
+}
+.sport{
+    padding-right: 20px;
+}
+#brand{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+#brand img{
+    width: 100%;
+    height: 100vh;
+}
+#brand .brands{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 50%;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+#brand h3::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 23px;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: translate(-50px);
+    color: #fff;
+    opacity: 0;
+}
+#brand h3:hover::after{
+    transform: translate(0px);
+    opacity: 0.4;
+}
+.collaction{
+    padding-right: 20px;
+}
+#shoes{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+}
+.new{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.new h4{
+    text-transform: capitalize;
+}
+#cards{
+    width: 100%;
+    height: 100vh;
+ 
+    overflow: auto;
+    position: relative;
+}
+#cards button{
+    width: 300px;
+    height: 40px;
+    border: none;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px;
+    background-color: #fff;
+    left:15px;
+}
+.first{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.second{
+    width: 100%;
+    display: flex;
+    display: none;
+}
+.card1{
+    width: 400px;
+    height: 450px;
+    background-color: rgb(247,247,247);
+    margin: 0 2px;
+    position: relative;
+}
+.card2{
+    width: 400px;
+    height: 450px;
+    background-color: rgb(247,247,247);
+    margin: 0 2px;
+    position: relative;
+   
+}
+.card3{
+    width: 400px;
+    height: 450px;
+    background-color: rgb(247,247,247);
+    margin: 0 2px;
+    position: relative;
+ 
+}
+.card4{
+    width: 400px;
+    height: 450px;
+    background-color: rgb(247,247,247);
+    margin: 0 2px;
+    position: relative;
+}
+.card5{
+    width: 400px;
+    height: 450px;
+    background-color: rgb(247,247,247);
+    margin: 0 px;
+    position: relative;
+    
+}
+.card6{
+    width: 400px;
+    height: 450px;
+    background-color: rgb(247,247,247);
+    margin: 0 2px;
+    position: relative;
+   
+}
+.card7{
+    width: 400px;
+    height: 450px;
+    background-color: rgb(247,247,247);
+    margin: 0 2px;
+    position: relative;
+
+}
+.card8{
+    width: 400px;
+    height: 450px;
+    background-color: rgb(247,247,247);
+    margin: 0 2px;
+    position: relative;
+}
+.card9{
+    width: 400px;
+    height: 450px;
+    background-color: rgb(247,247,247);
+    margin: 0 2px;
+    position: relative;
+
+}
+.card10{
+    width: 400px;
+    height: 450px;
+    background-color: rgb(247,247,247);
+    margin: 0 2px;
+    position: relative;
+}
+.first img{
+    background-color: #fff;
+    width: 340px;
+    margin-top: 40px;
+    background: none;    
+}
+.second img{
+    background-color: #fff;
+    width: 340px;
+    margin-top: 40px;
+    background: none;
+      
+}
+.first h4{
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    bottom: 60px;
+}
+.second h4{
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    bottom: 60px;
+}
+
+.card1 .none{
+    display: none;
+}
+.card1:hover .none{
+    display: block;
+}
+.card2 .none{
+    display: none;
+}
+.card2:hover .none{
+    display: block;
+}
+.card3 .none{
+    display: none;
+}
+.card3:hover .none{
+    display: block;
+}
+.card4 .none{
+    display: none;
+}
+.card4:hover .none{
+    display: block;
+}
+.card5 .none{
+    display: none;
+}
+.card5:hover .none{
+    display: block;
+}
+.card6 .none{
+    display: none;
+}
+.card6:hover .none{
+    display: block;
+}
+.card7 .none{
+    display: none;
+}
+.card7:hover .none{
+    display: block;
+}
+.card8 .none{
+    display: none;
+}
+.card8:hover .none{
+    display: block;
+}
+#cloths{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+#cloths .menimg{
+    width: 50%;
+    height: 100vh;
+    position: relative;
+}
+#cloths .womenimg{
+    width: 50%;
+    height: 100vh;
+    position: relative;
+}
+#cloths h3::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 23px;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: translate(-50px);
+    color: #fff;
+    opacity: 0;
+}
+#cloths h3:hover::after{
+    transform: translate(0px);
+    opacity: 0.4;
+}
+.menimg .men{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    padding-left: 10px;
+}
+.menimg .shop{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    padding-right: 10px;
+}
+.womenimg .women{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+  
+}
+.womenimg .shopimg{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+   
+}
+#school{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    position: sticky;
+}
+#school img{
+    width: 100%;
+    height: 100vh;
+}
+#school h1{
+    position: absolute;
+    bottom: 10px;
+    font-size: 70px;
+    color: #fff;
+    text-transform: capitalize;
+}
+#mencloths{
+    width: 100%;
+    height: 10vh;
+    position: relative;
+    overflow-y: hidden;
+}
+#mencloths .first img{
+    width: 400px;
+    height: 350px;
+}
+.text{
+    position: absolute;
+    bottom: -10px;
+    font-size: 4vw;
+}
+.first img{
+    background-color: #fff;
+    width: 340px;
+    height: 400px;
+    background: none;    
+}
+.second img{
+    background-color: #fff;
+    width: 340px;
+    height: 400px; 
+    background: none;    
+}
+#womencloths{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.navlinks .hamburger{
+   font-size: 40px;
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   color: white;
+   position: fixed;
+   display: none;
+}
+footer{
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer .content1{
+    width: 30vw;
+    height: 50vh;
+}
+.content1 div{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.content1 div p{
+    padding-top: 10px;
+}
+footer .content2{
+    width: 30vw;
+    height: 50vh;
+}
+.content2 .fnavlinks{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-decoration: none;
+    color: #fff;
+}
+.content2 .fnavlinks h3{
+    font-size: 15px;
+}
+.fnavlinks li{
+    list-style: none;
+    padding-top: 10px;
+}
+.content2 .fnavlinks a{
+    text-decoration: none;
+    color: rgb(0,0,0);
+}
+footer .content3{
+    width: 30vw;
+    height: 50vh;
+}
+.content3 input{
+    width: 15vw;
+    height: 2vw;
+}
+.content3 button{
+    width: 5vw;
+    height: 2vw;
+}
+.content3 div{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.scroll{
+    display: none;
+}
+.visible{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: #fff;
+    font-size: large;
+    position: fixed;
+    display: none;
+}
+/* Mobile View (For screens smaller than 768px) */
+@media only screen and (max-width: 768px) {
+
+    /* General Styles */
+    body {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    #loader .white p, #loader .white h1 {
+        font-size: 8vw;
+    }
+
+    /* Navbar */
+    nav {
+        height: 8vh;
+    }
+
+    .navlogo img {
+        width: 40px;
+        padding-left: 10px;
+    }
+
+    .navlinks a, .navlog a {
+        padding: 0 10px;
+        font-size: 14px;
+    }
+
+    /* Header */
+    header {
+        height: 80vh;
+    }
+
+    .imgheader {
+        height: 80vh;
+        background-size: cover;
+    }
+
+    .items {
+        font-size: 16px;
+        height: auto;
+        padding: 0 10px;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    /* Featured Products */
+    .featured-products h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90vw;
+        margin-bottom: 20px;
+    }
+
+    /* Cards Section */
+    #cards {
+        height: auto;
+        margin: 30px 0;
+    }
+
+    .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10 {
+        width: 90vw;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .first img, .second img {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .first h4, .second h4 {
+        bottom: 20px;
+    }
+
+    /* Cloths Section */
+    #cloths {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    #cloths .menimg, #cloths .womenimg {
+        width: 100%;
+        height: auto;
+    }
+
+    .menimg .men, .womenimg .women {
+        font-size: 18px;
+    }
+
+    .menimg .shop, .womenimg .shopimg {
+        font-size: 18px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px;
+        font-size: 14px;
+        text-align: center;
+    }
+}
